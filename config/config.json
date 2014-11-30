@@ -1,0 +1,64 @@
+{
+    "view engines" : {
+        "nunjucks" : {
+            "module": "consolidate",
+            "renderer": "nunjucks",
+            "extensions": "path:./views/extensions"
+        }
+    },
+
+    "express" : {
+        "view engine" : "nunjucks"
+    },
+
+    "middleware": {
+
+        "session": {
+            "enabled": false
+        },
+
+        "appsec": {
+            "enabled": false
+        },
+
+        "static": {
+            "module": {
+                "arguments": [ "path:./.build" ]
+            }
+        },
+
+        "router": {
+            "module": {
+                "arguments": [{ "directory": "path:./controllers" }]
+            }
+        },
+
+        "cookieParser": {
+            "enabled": true,
+            "priority": 90,
+            "module": {
+                "name": "cookie-parser",
+                "arguments": [ "s3cr3t" ]
+            }
+        },
+
+        "fileNotFound": {
+            "enabled": true,
+            "priority": 130,
+            "module": {
+                "name": "kraken-js/middleware/404",
+                "arguments": [ "errors/404" ]
+            }
+        },
+
+        "serverError": {
+            "enabled": true,
+            "priority": 140,
+            "module": {
+                "name": "kraken-js/middleware/500",
+                "arguments": [ "errors/500" ]
+            }
+        }
+
+    }
+}
