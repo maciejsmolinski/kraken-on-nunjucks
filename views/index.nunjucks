@@ -1,1 +1,5 @@
-Hello from {{ name }}!
+{% extends '/layouts/main.nunjucks' %}
+
+{% block content %}
+  Hello from {{ name }}!
+{% endblock %}

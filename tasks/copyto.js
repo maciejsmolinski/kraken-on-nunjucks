@@ -10,13 +10,12 @@ module.exports = function copyto(grunt) {
     build: {
       files: [{
         cwd: 'public',
-        src: ['**/*'],
+        src: ['**/!(bourbon|neat)*.!(coffee|scss)'],
         dest: '.build/'
       }],
       options: {
         ignore: [
-        'public/css/**/*',
-
+        'public/style/**/*',
         'public/templates/**/*'
         ]
       }

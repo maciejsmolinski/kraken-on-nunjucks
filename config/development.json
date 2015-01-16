@@ -1,6 +1,4 @@
 {
-    
-
     "middleware": {
 
         "devtools": {
@@ -11,7 +9,7 @@
                 "arguments": [
                     "path:./public",
                     "path:./.build",
-                    {   
+                    {
                         "css": {
                             "module": "kraken-devtools/plugins/sass",
                             "files": "/css/**/*.css"

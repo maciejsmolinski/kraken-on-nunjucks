@@ -1,8 +1,8 @@
 'use strict';
 
-var http = require('http');
+var http    = require('http');
 var express = require('express');
-var kraken = require('kraken-js');
+var kraken  = require('kraken-js');
 
 
 var options, app, server;
@@ -13,6 +13,9 @@ var options, app, server;
  */
  options = {
   onconfig: function (config, next) {
+    // Expose 'config' globally
+    global.config = config;
+
     if (config.get('express:view engine') === 'nunjucks') {
       require('./extensions/nunjucksFilters')(config);
     }

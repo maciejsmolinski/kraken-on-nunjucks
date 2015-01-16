@@ -1,13 +1,23 @@
 'use strict';
 
-
+/**
+ * Clean files and folders.
+ *
+ * ---------------------------------------------------------------
+ *
+ * For usage docs see:
+ *    https://github.com/gruntjs/grunt-contrib-clean
+ */
 module.exports = function clean(grunt) {
-  // Load task
   grunt.loadNpmTasks('grunt-contrib-clean');
 
-  // Options
   return {
-   tmp: 'tmp',
-   build: '.build/templates'
- };
+    tmp: '.tmp',
+    build: '.build',
+    doc: 'doc',
+    coverage: 'spec/coverage',
+    sassCache: '.sass-cache',
+    jst: 'public/jst.js',
+  };
+
 };
