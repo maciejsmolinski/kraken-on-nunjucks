@@ -1,5 +1,7 @@
 # [Kraken.js](http://krakenjs.com/) on [Nunjucks](http://mozilla.github.io/nunjucks/)
 
+![Kraken on Nunjucks Screenshot](http://maciejsmolinski.com/kon-screenshot.png)
+
 ## 1. Installation
 
 1. Clone the repository and checkout the folder
@@ -13,6 +15,8 @@
     2. Production environment: `[PORT=8000] NODE_ENV=production node .`
 
 ### 1.1. Process Manager
+
+![Kraken on Nunjucks Screenshot](http://maciejsmolinski.com/kon-pm2.png)
 
 1. You can use [PM2](https://github.com/Unitech/PM2/) process manager so that the application restarts automatically in development mode and watches for file changes. It sets port and environment variables automatically via configuration file.
     1. Install it with `[sudo] npm install -g pm2`
