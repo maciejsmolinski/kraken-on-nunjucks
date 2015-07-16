@@ -9,7 +9,7 @@ module.exports = function (nunjucks) {
    *     {{ 'Hello\n\nWorld' | nl2br }} -> Hello<br><br>World
    *
    */
-  return function (string) {
+  return function nl2br(string) {
     return new nunjucks.runtime.SafeString(string.replace(/\n/g, '<br>'));
   };
 

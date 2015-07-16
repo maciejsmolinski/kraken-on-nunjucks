@@ -6,15 +6,16 @@
  * ---------------------------------------------------------------
  *
  * For usage docs see:
- *    https://github.com/gruntjs/grunt-contrib-sass
+ *    https://github.com/sindresorhus/grunt-sass
  */
-module.exports = function(grunt) {
-  grunt.loadNpmTasks('grunt-contrib-sass');
+module.exports = function sass(grunt) {
+  grunt.loadNpmTasks('grunt-sass');
 
   return {
     build: {
       options: {
-        style: 'expanded'
+        style: 'expanded',
+        sourceMap: true,
       },
       files: [{
         expand: true,

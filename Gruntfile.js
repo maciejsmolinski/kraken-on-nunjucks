@@ -10,7 +10,7 @@ module.exports = function (grunt) {
 
   // Register group tasks
   grunt.registerTask('default', [ 'test', 'build', 'watch' ]);
-  grunt.registerTask('test', [ 'jshint', 'mochaTest' ]);
-  grunt.registerTask('build', [ 'sass', 'nunjucks', 'sails-linker', 'copyto' ]);
+  grunt.registerTask('test',    [ 'jshint', 'jscs', 'mochaTest' ]);
+  grunt.registerTask('build',   [ 'sass', 'nunjucks', 'sails-linker', 'copyto' ]);
 
 };

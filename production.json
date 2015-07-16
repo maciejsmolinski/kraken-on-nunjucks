@@ -1,0 +1,18 @@
+{
+  "apps" : [
+    {
+      "name"               : "kon-production",
+      "script"             : "index.js",
+      "args"               : [""],
+      "watch"              : false,
+      "merge_logs"         : true,
+      "error_file"         : "log/kon-production.err.log",
+      "out_file"           : "log/kon-production.out.log",
+      "max_memory_restart" : "200M",
+      "env": {
+          "NODE_ENV": "production",
+          "PORT": "8000"
+      }
+    }
+  ]
+}

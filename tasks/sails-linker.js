@@ -9,7 +9,7 @@
  *    https://github.com/Zolmeister/grunt-sails-linker
  *
  */
-module.exports = function(grunt) {
+module.exports = function sailsLinker(grunt) {
   grunt.loadNpmTasks('grunt-sails-linker');
 
   return {
@@ -23,8 +23,8 @@ module.exports = function(grunt) {
       },
       files: {
         'views/**/*.nunjucks': [
-          'public/js/*.js'
-
+          'public/jst.js',
+          'public/js/*.js',
         ]
       }
     },

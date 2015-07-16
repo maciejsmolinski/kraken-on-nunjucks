@@ -11,13 +11,13 @@ var options, app, server;
  * Create and configure application. Also exports application instance for use by tests.
  * See https://github.com/krakenjs/kraken-js#options for additional configuration options.
  */
- options = {
+options = {
   onconfig: function (config, next) {
     // Expose 'config' globally
     global.config = config;
 
     if (config.get('express:view engine') === 'nunjucks') {
-      require('./extensions/nunjucksFilters')(config);
+      require('./extensions/nunjucks-filters')(config);
     }
     next(null, config);
   }
@@ -35,16 +35,16 @@ app.on('start', function () {
 /*
  * Create and start HTTP server.
  */
- if (!module.parent) {
+if (!module.parent) {
 
-    /*
-     * This is only done when this module is run directly, e.g. `node .` to allow for the
-     * application to be used in tests without binding to a port or file descriptor.
-     */
-     server = http.createServer(app);
-     server.listen(process.env.PORT || 8000);
-     server.on('listening', function () {
-      console.log('Server listening on http://localhost:%d', this.address().port);
-    });
+  /*
+   * This is only done when this module is run directly, e.g. `node .` to allow for the
+   * application to be used in tests without binding to a port or file descriptor.
+   */
+  server = http.createServer(app);
+  server.listen(process.env.PORT || 8000);
+  server.on('listening', function () {
+    console.log('Server listening on http://localhost:%d', this.address().port);
+  });
 
-   }
+}

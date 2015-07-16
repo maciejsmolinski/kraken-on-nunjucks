@@ -1,15 +1,15 @@
 'use strict';
 
 /**
- * Runs JSHint against specified files to ensure best quality
+ * Runs JSCS against specified files to ensure best quality
  *
  * ---------------------------------------------------------------
  *
  * For usage docs see:
- *    https://github.com/gruntjs/grunt-contrib-jshint
+ *    https://github.com/jscs-dev/grunt-jscs
  */
-module.exports = function jshint(grunt) {
-  grunt.loadNpmTasks('grunt-contrib-jshint');
+module.exports = function jscs(grunt) {
+  grunt.loadNpmTasks('grunt-jscs');
 
   return {
     backend: [
@@ -22,10 +22,11 @@ module.exports = function jshint(grunt) {
       'index.js',
     ],
     frontend: [
-      'public/js/*.js',
+      'public/js/!(vendor)',
     ],
     options: {
-      jshintrc: '.jshintrc'
+      config: '.jscsrc',
+      verbose: true
     }
   };
 };

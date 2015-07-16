@@ -9,7 +9,7 @@
  * 		https://github.com/jlongster/grunt-nunjucks
  *
  */
- module.exports = function(grunt) {
+ module.exports = function nunjucks(grunt) {
    grunt.loadNpmTasks('grunt-nunjucks');
 
    return {
@@ -18,7 +18,7 @@
       dest: 'public/jst.js',
       options: {
         name: function (filename) {
-          return filename.replace(/public\/templates\/(.*)\.nunjucks/, '$1');
+          return filename.replace(/public\/templates\/(.*)/, '$1');
         }
       }
     }

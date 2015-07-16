@@ -9,10 +9,16 @@
  *    https://github.com/gruntjs/grunt-contrib-watch
  *
  */
-module.exports = function(grunt) {
+module.exports = function watch(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
 
   return {
+    reload: {
+      files: [ 'Gruntfile.js', 'tasks/*.js' ],
+      options: {
+        reload: true
+      }
+    },
     backend: {
       files: [
         'Gruntfile.js',

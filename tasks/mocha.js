@@ -8,10 +8,10 @@
  * For usage docs see:
  * 		https://github.com/gruntjs/grunt-mocha-test
  */
-module.exports = function(grunt) {
+module.exports = function mocha(grunt) {
 
 	grunt.config.set('mochaTest', {
-	  test: {
+    test: {
         options: {
           reporter: 'spec',
           require: './spec/config/chai_helper'

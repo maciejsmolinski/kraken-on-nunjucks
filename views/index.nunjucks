@@ -1,4 +1,4 @@
-{% extends '/layouts/main.nunjucks' %}
+{% extends 'layouts/main.nunjucks' %}
 
 {% block content %}
   Hello from {{ name }}!

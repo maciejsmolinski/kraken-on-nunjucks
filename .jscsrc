@@ -1,0 +1,48 @@
+{
+    "disallowSpacesInNamedFunctionExpression": {
+      "beforeOpeningRoundBrace": true
+    },
+    "disallowSpacesInFunctionDeclaration": {
+      "beforeOpeningRoundBrace": true
+    },
+    "disallowSpacesInAnonymousFunctionExpression": null,
+    "disallowDanglingUnderscores": true,
+    "disallowMixedSpacesAndTabs": true,
+    "disallowTrailingWhitespace": true,
+    "disallowYodaConditions": true,
+    "requireBlocksOnNewline": 1,
+    "requireCapitalizedConstructors": true,
+    "requireCurlyBraces": true,
+    "requireDollarBeforejQueryAssignment": true,
+    "requireLineBreakAfterVariableAssignment": true,
+    "requireParenthesesAroundIIFE": true,
+    "requireSemicolons": true,
+    "requireSpaceAfterLineComment": true,
+    "requireSpaceAfterKeywords": [
+      "do",
+      "for",
+      "if",
+      "else",
+      "switch",
+      "case",
+      "try",
+      "catch",
+      "void",
+      "while",
+      "with",
+      "return",
+      "typeof"
+    ],
+    "requireSpaceBeforeObjectValues": true,
+    "requireSpaceBetweenArguments": true,
+    "requireSpacesInAnonymousFunctionExpression": {
+      "beforeOpeningRoundBrace": true,
+      "beforeOpeningCurlyBrace": true
+    },
+    "requireSpacesInConditionalExpression": {
+      "afterTest": true,
+      "beforeConsequent": true,
+      "afterConsequent": true,
+      "beforeAlternate": true
+    }
+}
